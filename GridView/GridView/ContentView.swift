@@ -9,10 +9,24 @@ import SwiftUI
 
 struct ContentView: View {
     
+    var items = Item.dummyData
     @State private var gridType: GridType = GridType.single
     
     var body: some View {
-       GridTypePicker(gridType: $gridType)
+        VStack{
+            GridTypePicker(gridType: $gridType)
+            
+            ScrollView{
+                LazyVGrid(columns: gridType.columns, content: {
+                    ForEach(items){item in
+                        Image(item.imageName)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                    }
+                })
+            }.animation(.default)
+            
+        }
     }
 }
 
@@ -41,5 +55,6 @@ struct GridTypePicker:View {
                 }
             }
         }.pickerStyle(SegmentedPickerStyle())
+        
     }
 }
