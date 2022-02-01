@@ -18,14 +18,20 @@ struct ContentView: View {
             
             ScrollView{
                 LazyVGrid(columns: gridType.columns, content: {
-                    ForEach(items){item in
-                        Image(item.imageName)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                    }
-                })
-            }.animation(.default)
-            
+                    
+                        switch gridType {
+                            case .single : GridType_Single(items: items)
+                            default :
+                                ForEach(items){ item in
+                                    Image(item.imageName)
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .animation(.default)
+                                }
+                        }
+                    
+                    })
+            }
         }
     }
 }
@@ -36,25 +42,32 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-struct GridTypePicker:View {
-
-    @Binding var gridType: GridType
+struct GridType_Single: View{
     
-    var body: some View {
-        Picker("grid", selection: $gridType){
-            ForEach(GridType.allCases, id: \.self){ type in
-                switch type {
-                case .single:
-                    Image(systemName: "rectangle.grid.1x2")
-                case .double:
-                    Image(systemName: "square.grid.2x2")
-                case .triple:
-                    Image(systemName: "square.grid.3x2")
-                case .adaptive:
-                    Image(systemName: "square.grid.4x3.fill")
-                }
+    let items : [Item]
+    
+    var body: some View{
+        ForEach(items){item in
+            
+            ZStack{
+                
+                Image(item.imageName)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .animation(.default)
+                
+                HStack{
+                    VStack{
+                        Spacer()
+                        Text(item.mainTitle)
+                        Text(item.subTitle)
+                    }
+            
+                    Spacer()
+                }.padding(10)
+                
             }
-        }.pickerStyle(SegmentedPickerStyle())
+        }
         
     }
 }

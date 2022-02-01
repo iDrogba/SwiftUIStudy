@@ -20,6 +20,7 @@
 		3FC2BA8127A91A8300A48B7A /* IMG_0.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3FC2BA7E27A91A8300A48B7A /* IMG_0.jpeg */; };
 		3FC2BA8227A91A8300A48B7A /* IMG_1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3FC2BA7F27A91A8300A48B7A /* IMG_1.jpeg */; };
 		3FC2BA8527A91D2000A48B7A /* GridType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC2BA8427A91D2000A48B7A /* GridType.swift */; };
+		3FECDB1127A93AC400610BA3 /* GridTypePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FECDB1027A93AC400610BA3 /* GridTypePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		3FC2BA7E27A91A8300A48B7A /* IMG_0.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0.jpeg; sourceTree = "<group>"; };
 		3FC2BA7F27A91A8300A48B7A /* IMG_1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_1.jpeg; sourceTree = "<group>"; };
 		3FC2BA8427A91D2000A48B7A /* GridType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridType.swift; sourceTree = "<group>"; };
+		3FECDB1027A93AC400610BA3 /* GridTypePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridTypePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 				3FC2BA5527A9186700A48B7A /* Preview Content */,
 				3FC2BA8427A91D2000A48B7A /* GridType.swift */,
 				3FC228A127A9299400B20FE1 /* Item.swift */,
+				3FECDB1027A93AC400610BA3 /* GridTypePicker.swift */,
 			);
 			path = GridView;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				3FC228A227A9299400B20FE1 /* Item.swift in Sources */,
 				3FC2BA4E27A9186500A48B7A /* AppDelegate.swift in Sources */,
 				3FC2BA8527A91D2000A48B7A /* GridType.swift in Sources */,
+				3FECDB1127A93AC400610BA3 /* GridTypePicker.swift in Sources */,
 				3FC2BA5027A9186500A48B7A /* SceneDelegate.swift in Sources */,
 				3FC2BA5227A9186500A48B7A /* ContentView.swift in Sources */,
 			);
