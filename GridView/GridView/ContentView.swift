@@ -19,16 +19,17 @@ struct ContentView: View {
             ScrollView{
                 LazyVGrid(columns: gridType.columns, content: {
                     
+                    
+                    ForEach(items){ item in
                         switch gridType {
-                            case .single : GridType_Single(items: items)
-                            default :
-                                ForEach(items){ item in
-                                    Image(item.imageName)
+                        case .single: GridType_Single(item: item)
+                        default:  Image(item.imageName)
                                         .resizable()
                                         .aspectRatio(contentMode: .fit)
                                         .animation(.default)
-                                }
                         }
+                        
+                    }
                     
                     })
             }
@@ -44,30 +45,26 @@ struct ContentView_Previews: PreviewProvider {
 
 struct GridType_Single: View{
     
-    let items : [Item]
+    let item : Item
     
     var body: some View{
-        ForEach(items){item in
+        ZStack{
             
-            ZStack{
-                
-                Image(item.imageName)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .animation(.default)
-                
-                HStack{
-                    VStack{
-                        Spacer()
-                        Text(item.mainTitle)
-                        Text(item.subTitle)
-                    }
+            Image(item.imageName)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .animation(.default)
             
+            HStack{
+                VStack{
                     Spacer()
-                }.padding(10)
-                
-            }
-        }
+                    Text(item.mainTitle)
+                    Text(item.subTitle)
+                }
         
+                Spacer()
+            }.padding(10)
+            
+        }
     }
 }
