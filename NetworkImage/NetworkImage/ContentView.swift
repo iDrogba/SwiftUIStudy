@@ -17,10 +17,12 @@ struct ContentView: View {
                 LazyVGrid(columns: [GridItem(.flexible())], content:{
                     ForEach(users){ user in
                         
-                        NavigationLink(destination: Text("Destination"), label: HStack{
-                            URLImage(urlString: user.avatar)
-                            Text("\(user.name)")
-                            Spacer()
+                        NavigationLink(destination: UserDetailView(user: user), label:{
+                            HStack{
+                                URLImage(urlString: user.avatar)
+                                Text(user.name)
+                                Spacer()
+                            }
                         })
                         
                     }

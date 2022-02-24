@@ -15,6 +15,7 @@
 		3F6809CA27C75786007687F3 /* NetworkImageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6809C927C75786007687F3 /* NetworkImageUITests.swift */; };
 		3F6809CC27C75786007687F3 /* NetworkImageUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6809CB27C75786007687F3 /* NetworkImageUITestsLaunchTests.swift */; };
 		3F6809D927C76457007687F3 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6809D827C76457007687F3 /* WebService.swift */; };
+		3F6809DB27C7863D007687F3 /* UserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6809DA27C7863D007687F3 /* UserDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		3F6809C927C75786007687F3 /* NetworkImageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImageUITests.swift; sourceTree = "<group>"; };
 		3F6809CB27C75786007687F3 /* NetworkImageUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImageUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3F6809D827C76457007687F3 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		3F6809DA27C7863D007687F3 /* UserDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				3F6809D827C76457007687F3 /* WebService.swift */,
 				3F6809B227C75785007687F3 /* Assets.xcassets */,
 				3F6809B427C75785007687F3 /* Preview Content */,
+				3F6809DA27C7863D007687F3 /* UserDetailView.swift */,
 			);
 			path = NetworkImage;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F6809DB27C7863D007687F3 /* UserDetailView.swift in Sources */,
 				3F6809D927C76457007687F3 /* WebService.swift in Sources */,
 				3F6809B127C75784007687F3 /* ContentView.swift in Sources */,
 				3F6809AF27C75784007687F3 /* NetworkImageApp.swift in Sources */,
