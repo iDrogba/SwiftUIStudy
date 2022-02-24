@@ -35,14 +35,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3F68C33E27BBCA1D002B82F8 /* jsonPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jsonPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F68C33E27BBCA1D002B82F8 /* JsonPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JsonPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F68C34127BBCA1D002B82F8 /* jsonPracticeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jsonPracticeApp.swift; sourceTree = "<group>"; };
 		3F68C34327BBCA1D002B82F8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3F68C34527BBCA1E002B82F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F68C34827BBCA1E002B82F8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		3F68C34E27BBCA1E002B82F8 /* jsonPracticeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jsonPracticeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F68C34E27BBCA1E002B82F8 /* JsonPracticeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JsonPracticeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F68C35227BBCA1E002B82F8 /* jsonPracticeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jsonPracticeTests.swift; sourceTree = "<group>"; };
-		3F68C35827BBCA1E002B82F8 /* jsonPracticeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jsonPracticeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F68C35827BBCA1E002B82F8 /* JsonPracticeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JsonPracticeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F68C35C27BBCA1E002B82F8 /* jsonPracticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jsonPracticeUITests.swift; sourceTree = "<group>"; };
 		3F68C35E27BBCA1E002B82F8 /* jsonPracticeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jsonPracticeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3F68C36B27BBCA8D002B82F8 /* WebAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebAPI.swift; sourceTree = "<group>"; };
@@ -86,9 +86,9 @@
 		3F68C33F27BBCA1D002B82F8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3F68C33E27BBCA1D002B82F8 /* jsonPractice.app */,
-				3F68C34E27BBCA1E002B82F8 /* jsonPracticeTests.xctest */,
-				3F68C35827BBCA1E002B82F8 /* jsonPracticeUITests.xctest */,
+				3F68C33E27BBCA1D002B82F8 /* JsonPractice.app */,
+				3F68C34E27BBCA1E002B82F8 /* JsonPracticeTests.xctest */,
+				3F68C35827BBCA1E002B82F8 /* JsonPracticeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -133,9 +133,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3F68C33D27BBCA1D002B82F8 /* jsonPractice */ = {
+		3F68C33D27BBCA1D002B82F8 /* JsonPractice */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3F68C36227BBCA1E002B82F8 /* Build configuration list for PBXNativeTarget "jsonPractice" */;
+			buildConfigurationList = 3F68C36227BBCA1E002B82F8 /* Build configuration list for PBXNativeTarget "JsonPractice" */;
 			buildPhases = (
 				3F68C33A27BBCA1D002B82F8 /* Sources */,
 				3F68C33B27BBCA1D002B82F8 /* Frameworks */,
@@ -145,14 +145,14 @@
 			);
 			dependencies = (
 			);
-			name = jsonPractice;
+			name = JsonPractice;
 			productName = jsonPractice;
-			productReference = 3F68C33E27BBCA1D002B82F8 /* jsonPractice.app */;
+			productReference = 3F68C33E27BBCA1D002B82F8 /* JsonPractice.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3F68C34D27BBCA1E002B82F8 /* jsonPracticeTests */ = {
+		3F68C34D27BBCA1E002B82F8 /* JsonPracticeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3F68C36527BBCA1E002B82F8 /* Build configuration list for PBXNativeTarget "jsonPracticeTests" */;
+			buildConfigurationList = 3F68C36527BBCA1E002B82F8 /* Build configuration list for PBXNativeTarget "JsonPracticeTests" */;
 			buildPhases = (
 				3F68C34A27BBCA1E002B82F8 /* Sources */,
 				3F68C34B27BBCA1E002B82F8 /* Frameworks */,
@@ -163,14 +163,14 @@
 			dependencies = (
 				3F68C35027BBCA1E002B82F8 /* PBXTargetDependency */,
 			);
-			name = jsonPracticeTests;
+			name = JsonPracticeTests;
 			productName = jsonPracticeTests;
-			productReference = 3F68C34E27BBCA1E002B82F8 /* jsonPracticeTests.xctest */;
+			productReference = 3F68C34E27BBCA1E002B82F8 /* JsonPracticeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		3F68C35727BBCA1E002B82F8 /* jsonPracticeUITests */ = {
+		3F68C35727BBCA1E002B82F8 /* JsonPracticeUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3F68C36827BBCA1E002B82F8 /* Build configuration list for PBXNativeTarget "jsonPracticeUITests" */;
+			buildConfigurationList = 3F68C36827BBCA1E002B82F8 /* Build configuration list for PBXNativeTarget "JsonPracticeUITests" */;
 			buildPhases = (
 				3F68C35427BBCA1E002B82F8 /* Sources */,
 				3F68C35527BBCA1E002B82F8 /* Frameworks */,
@@ -181,9 +181,9 @@
 			dependencies = (
 				3F68C35A27BBCA1E002B82F8 /* PBXTargetDependency */,
 			);
-			name = jsonPracticeUITests;
+			name = JsonPracticeUITests;
 			productName = jsonPracticeUITests;
-			productReference = 3F68C35827BBCA1E002B82F8 /* jsonPracticeUITests.xctest */;
+			productReference = 3F68C35827BBCA1E002B82F8 /* JsonPracticeUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -209,7 +209,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3F68C33927BBCA1D002B82F8 /* Build configuration list for PBXProject "jsonPractice" */;
+			buildConfigurationList = 3F68C33927BBCA1D002B82F8 /* Build configuration list for PBXProject "JsonPractice" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -222,9 +222,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3F68C33D27BBCA1D002B82F8 /* jsonPractice */,
-				3F68C34D27BBCA1E002B82F8 /* jsonPracticeTests */,
-				3F68C35727BBCA1E002B82F8 /* jsonPracticeUITests */,
+				3F68C33D27BBCA1D002B82F8 /* JsonPractice */,
+				3F68C34D27BBCA1E002B82F8 /* JsonPracticeTests */,
+				3F68C35727BBCA1E002B82F8 /* JsonPracticeUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -288,12 +288,12 @@
 /* Begin PBXTargetDependency section */
 		3F68C35027BBCA1E002B82F8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3F68C33D27BBCA1D002B82F8 /* jsonPractice */;
+			target = 3F68C33D27BBCA1D002B82F8 /* JsonPractice */;
 			targetProxy = 3F68C34F27BBCA1E002B82F8 /* PBXContainerItemProxy */;
 		};
 		3F68C35A27BBCA1E002B82F8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3F68C33D27BBCA1D002B82F8 /* jsonPractice */;
+			target = 3F68C33D27BBCA1D002B82F8 /* JsonPractice */;
 			targetProxy = 3F68C35927BBCA1E002B82F8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -436,7 +436,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "---------.jsonPractice";
-				PRODUCT_NAME = jsonPractice;
+				PRODUCT_NAME = JsonPractice;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -486,7 +486,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/jsonPractice.app/jsonPractice";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JsonPractice.app/JsonPractice";
 			};
 			name = Debug;
 		};
@@ -505,7 +505,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/jsonPractice.app/jsonPractice";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JsonPractice.app/JsonPractice";
 			};
 			name = Release;
 		};
@@ -546,7 +546,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3F68C33927BBCA1D002B82F8 /* Build configuration list for PBXProject "jsonPractice" */ = {
+		3F68C33927BBCA1D002B82F8 /* Build configuration list for PBXProject "JsonPractice" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3F68C36027BBCA1E002B82F8 /* Debug */,
@@ -555,7 +555,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3F68C36227BBCA1E002B82F8 /* Build configuration list for PBXNativeTarget "jsonPractice" */ = {
+		3F68C36227BBCA1E002B82F8 /* Build configuration list for PBXNativeTarget "JsonPractice" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3F68C36327BBCA1E002B82F8 /* Debug */,
@@ -564,7 +564,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3F68C36527BBCA1E002B82F8 /* Build configuration list for PBXNativeTarget "jsonPracticeTests" */ = {
+		3F68C36527BBCA1E002B82F8 /* Build configuration list for PBXNativeTarget "JsonPracticeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3F68C36627BBCA1E002B82F8 /* Debug */,
@@ -573,7 +573,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3F68C36827BBCA1E002B82F8 /* Build configuration list for PBXNativeTarget "jsonPracticeUITests" */ = {
+		3F68C36827BBCA1E002B82F8 /* Build configuration list for PBXNativeTarget "JsonPracticeUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3F68C36927BBCA1E002B82F8 /* Debug */,
