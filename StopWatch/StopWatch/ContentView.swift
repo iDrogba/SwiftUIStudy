@@ -23,7 +23,12 @@ struct ContentView: View {
     var body: some View {
         VStack{
             Spacer()
+            
             ZStack{
+                CenterCircle()
+                CenterCircle()
+                    .offset(y:50)
+                
                 ClockNumber()
                 
                 ClockTick()
@@ -34,10 +39,6 @@ struct ContentView: View {
                 MinuteHand(second: $time)
                 MinSecondHand(second: $time)
                     .offset(y:50)
-                
-                CenterCircle()
-                CenterCircle()
-                    .offset(y:50)
             }
             .onReceive(timer,perform: { _ in
                 if isContinue {
@@ -47,11 +48,20 @@ struct ContentView: View {
                 }
             })
             .padding(.bottom, 100)
+            
             Spacer()
+            
             ReadFormatTime(readFormatTime: readFormatString)
             
             StartStopButton(isStart: $isContinue)
         }
+    }
+}
+
+struct CenterCircle: View {
+    var body: some View{
+        Circle()
+            .frame(width: 10, height: 10)
     }
 }
 
@@ -138,13 +148,6 @@ struct MinSecondHand: View {
             .frame(width: 1, height: lengthOfHand)
             .offset(y: -lengthOfHand/2)
             .rotationEffect(.degrees(second / 60 * 60 * 360))
-    }
-}
-
-struct CenterCircle: View {
-    var body: some View{
-        Circle()
-            .frame(width: 10, height: 10)
     }
 }
 
