@@ -10,13 +10,14 @@ import PhotosUI
 
 struct ContentView: View {
     
-    @State private var isPresenPicker = false
+    @State private var isPresentPicker = false
     @State private var images = [UIImage]()
     
     var body: some View {
+        
         VStack{
             Button("Select Image"){
-                isPresenPicker = true
+                isPresentPicker = true
             }
             
             List{
@@ -26,15 +27,15 @@ struct ContentView: View {
                         .aspectRatio(contentMode: .fit)
                         .frame(width: UIScreen.main.bounds.size.width/1.5, height: UIScreen.main.bounds.size.height/3)
                         .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 10))
-                       
                         
                 }
             }
         }
-        .sheet(isPresented: $isPresenPicker, onDismiss: nil, content: {
+        .sheet(isPresented: $isPresentPicker, onDismiss: nil, content: {
             //Picker 뿌려줄 것
-            ImagePicker(isPresent: $isPresenPicker, images: $images)
+            ImagePicker(isPresent: $isPresentPicker, images: $images)
         })
+  
     }
 }
 
