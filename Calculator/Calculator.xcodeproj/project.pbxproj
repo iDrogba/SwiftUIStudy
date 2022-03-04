@@ -14,6 +14,7 @@
 		3F373A8827D0FE6000AF22AC /* CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F373A8727D0FE6000AF22AC /* CalculatorTests.swift */; };
 		3F373A9227D0FE6100AF22AC /* CalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F373A9127D0FE6100AF22AC /* CalculatorUITests.swift */; };
 		3F373A9427D0FE6100AF22AC /* CalculatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F373A9327D0FE6100AF22AC /* CalculatorUITestsLaunchTests.swift */; };
+		3FB1F40427D2375900670E7E /* CalculationCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB1F40327D2375900670E7E /* CalculationCore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		3F373A8D27D0FE6100AF22AC /* CalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F373A9127D0FE6100AF22AC /* CalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorUITests.swift; sourceTree = "<group>"; };
 		3F373A9327D0FE6100AF22AC /* CalculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3FB1F40327D2375900670E7E /* CalculationCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationCore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				3F373A7827D0FE5E00AF22AC /* ContentView.swift */,
 				3F373A7A27D0FE6000AF22AC /* Assets.xcassets */,
 				3F373A7C27D0FE6000AF22AC /* Preview Content */,
+				3FB1F40327D2375900670E7E /* CalculationCore.swift */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FB1F40427D2375900670E7E /* CalculationCore.swift in Sources */,
 				3F373A7927D0FE5E00AF22AC /* ContentView.swift in Sources */,
 				3F373A7727D0FE5E00AF22AC /* CalculatorApp.swift in Sources */,
 			);
