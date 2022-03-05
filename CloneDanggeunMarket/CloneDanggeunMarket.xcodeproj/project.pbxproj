@@ -14,6 +14,8 @@
 		3FD1C16327D34C5400F69DE7 /* CloneDanggeunMarketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD1C16227D34C5400F69DE7 /* CloneDanggeunMarketTests.swift */; };
 		3FD1C16D27D34C5400F69DE7 /* CloneDanggeunMarketUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD1C16C27D34C5400F69DE7 /* CloneDanggeunMarketUITests.swift */; };
 		3FD1C16F27D34C5400F69DE7 /* CloneDanggeunMarketUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD1C16E27D34C5400F69DE7 /* CloneDanggeunMarketUITestsLaunchTests.swift */; };
+		3FD1C17C27D38A9800F69DE7 /* 999846.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FD1C17B27D38A9700F69DE7 /* 999846.jpg */; };
+		3FD1C17E27D38AA600F69DE7 /* 994669.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FD1C17D27D38AA600F69DE7 /* 994669.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		3FD1C16827D34C5400F69DE7 /* CloneDanggeunMarketUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CloneDanggeunMarketUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FD1C16C27D34C5400F69DE7 /* CloneDanggeunMarketUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloneDanggeunMarketUITests.swift; sourceTree = "<group>"; };
 		3FD1C16E27D34C5400F69DE7 /* CloneDanggeunMarketUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloneDanggeunMarketUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3FD1C17B27D38A9700F69DE7 /* 999846.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 999846.jpg; sourceTree = "<group>"; };
+		3FD1C17D27D38AA600F69DE7 /* 994669.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 994669.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,8 @@
 				3FD1C15127D34C5200F69DE7 /* CloneDanggeunMarketApp.swift */,
 				3FD1C15327D34C5200F69DE7 /* ContentView.swift */,
 				3FD1C15527D34C5300F69DE7 /* Assets.xcassets */,
+				3FD1C17D27D38AA600F69DE7 /* 994669.jpg */,
+				3FD1C17B27D38A9700F69DE7 /* 999846.jpg */,
 				3FD1C15727D34C5300F69DE7 /* Preview Content */,
 			);
 			path = CloneDanggeunMarket;
@@ -231,8 +237,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FD1C17E27D38AA600F69DE7 /* 994669.jpg in Resources */,
 				3FD1C15927D34C5300F69DE7 /* Preview Assets.xcassets in Resources */,
 				3FD1C15627D34C5300F69DE7 /* Assets.xcassets in Resources */,
+				3FD1C17C27D38A9800F69DE7 /* 999846.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

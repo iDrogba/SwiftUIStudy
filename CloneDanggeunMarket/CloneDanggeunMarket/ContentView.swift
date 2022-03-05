@@ -47,48 +47,74 @@ struct HomeView: View {
         
     var body: some View {
         NavigationView{
+            GeometryReader{ geometry in
+                VStack{
+                    List{
+                        ForEach(0..<10){ index in
+                      
+                            HStack(alignment: .top, spacing: 10) {
 
-            VStack{
-            
-                ScrollView{
-                    ForEach(0..<100){index in
-                        Text(index.description)
-                            .padding()
+                                Image("994669")
+                                    .resizable()
+                                    .cornerRadius(8)
+                                    .aspectRatio(1, contentMode: .fit)
+                                    
+                               
+                                VStack(alignment:.leading, spacing: 3) {
+                                    Text("asdfasdfffdserwgregwewgrsa")
+                                        .font(.callout)
+                                        .fontWeight(.light)
+                                        .lineLimit(2)
+                                        
+                                    Text("목동")
+                                        .fontWeight(.thin)
+                                        .lineLimit(1)
+                                        .font(.footnote)
+                                        .foregroundColor(.gray)
+                                    Text("1000"+"원")
+                                        .fontWeight(.semibold)
+                                        .lineLimit(1)
+                                    
+                                    Spacer()
+                                }
+                                
+                                
                         
-                    }
-                }
-                
-            }.toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    
-                    HStack(spacing: 0){
-                        Picker("", selection: $selectedLocation) {
-                            ForEach(0..<storedLocation.count){ index in
-                   
-                                Text("\(storedLocation[index])")
-                                    .font(.largeTitle)
-                                    .tag(index)
                             }
-                        }.pickerStyle(MenuPickerStyle())
-                        .onTapGesture {
-                            isArrowUp.toggle()
-                        }
-                        .onChange(of: selectedLocation) { _ in
-                            isArrowUp.toggle()
-                        }
-                        
-                        Image(systemName: isArrowUp ? "arrow.up" : "arrow.down").animation(.easeInOut)
-                    }
+                            .padding(.vertical, 7.0)
+                            .frame(width: geometry.size.width * 0.9, height: geometry.size.width/3.5,alignment: .leading)
 
+                        }
+                    }.listStyle(InsetListStyle())
+                          
                 }
-                    
-                
-            }
-            .navigationBarTitleDisplayMode(.inline)
-           
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        
+                        HStack(spacing: 0){
+                            Picker("", selection: $selectedLocation) {
+                                ForEach(0..<storedLocation.count){ index in
+                       
+                                    Text("\(storedLocation[index])")
+                                        .font(.largeTitle)
+                                        .tag(index)
+                                }
+                            }.pickerStyle(MenuPickerStyle())
+                            .onTapGesture {
+                                isArrowUp.toggle()
+                            }
+                            .onChange(of: selectedLocation) { _ in
+                                isArrowUp.toggle()
+                            }
+                            
+                            Image(systemName: isArrowUp ? "arrow.up" : "arrow.down").animation(.easeInOut)
+                        }
+
+                    }
+                }.navigationBarTitleDisplayMode(.inline)
             
+            }
         }
-        
     }
 }
 
