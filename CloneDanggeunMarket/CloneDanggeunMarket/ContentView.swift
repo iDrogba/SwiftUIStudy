@@ -32,6 +32,7 @@ struct ContentView: View {
                 Label("나의 당근", systemImage: "person")
             }.tag(4)
         }.accentColor(Color.black)
+        .background(Color.white)
         
     }
 }
@@ -40,35 +41,54 @@ struct ContentView: View {
 //중고 거래 글 (미리보기 사진, 글 제목, 설명)
 struct HomeView: View {
     
-    @State private var selectedLocation = 1
+    @State private var selectedLocation = 0
+    @State private var isArrowUp = true
     var storedLocation = ["공릉 1동","오륜동","잠실 2동"]
         
     var body: some View {
         NavigationView{
 
-        
             VStack{
-                Color.gray
+            
+                ScrollView{
+                    ForEach(0..<100){index in
+                        Text(index.description)
+                            .padding()
+                        
+                    }
+                }
                 
             }.toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     
-                    Picker(selection: $selectedLocation) {
-                        ForEach(0..<storedLocation.count){ index in
-                            Text("\(storedLocation[index])")
-                                .tag(index)
+                    HStack(spacing: 0){
+                        Picker("", selection: $selectedLocation) {
+                            ForEach(0..<storedLocation.count){ index in
+                   
+                                Text("\(storedLocation[index])")
+                                    .font(.largeTitle)
+                                    .tag(index)
+                            }
+                        }.pickerStyle(MenuPickerStyle())
+                        .onTapGesture {
+                            isArrowUp.toggle()
+                        }
+                        .onChange(of: selectedLocation) { _ in
+                            isArrowUp.toggle()
                         }
                         
-                    } label: {
-                        Text("\(storedLocation[selectedLocation])")
-                            .font(.largeTitle)
-                        
-                    }.pickerStyle(MenuPickerStyle())
+                        Image(systemName: isArrowUp ? "arrow.up" : "arrow.down").animation(.easeInOut)
+                    }
+
                 }
+                    
+                
             }
+            .navigationBarTitleDisplayMode(.inline)
            
             
-        }.navigationBarTitleDisplayMode(.large)
+        }
+        
     }
 }
 
