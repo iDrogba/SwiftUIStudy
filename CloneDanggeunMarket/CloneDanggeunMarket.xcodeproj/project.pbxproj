@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F1F471627D4BA2100C85173 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1F471527D4BA2100C85173 /* HomeView.swift */; };
 		3FD1C15227D34C5200F69DE7 /* CloneDanggeunMarketApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD1C15127D34C5200F69DE7 /* CloneDanggeunMarketApp.swift */; };
 		3FD1C15427D34C5200F69DE7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD1C15327D34C5200F69DE7 /* ContentView.swift */; };
 		3FD1C15627D34C5300F69DE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FD1C15527D34C5300F69DE7 /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F1F471527D4BA2100C85173 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		3FD1C14E27D34C5200F69DE7 /* CloneDanggeunMarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloneDanggeunMarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FD1C15127D34C5200F69DE7 /* CloneDanggeunMarketApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloneDanggeunMarketApp.swift; sourceTree = "<group>"; };
 		3FD1C15327D34C5200F69DE7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -75,6 +77,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F1F471427D4BA1300C85173 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3F1F471527D4BA2100C85173 /* HomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		3FD1C14527D34C5200F69DE7 = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +108,7 @@
 		3FD1C15027D34C5200F69DE7 /* CloneDanggeunMarket */ = {
 			isa = PBXGroup;
 			children = (
+				3F1F471427D4BA1300C85173 /* View */,
 				3FD1C15127D34C5200F69DE7 /* CloneDanggeunMarketApp.swift */,
 				3FD1C15327D34C5200F69DE7 /* ContentView.swift */,
 				3FD1C15527D34C5300F69DE7 /* Assets.xcassets */,
@@ -265,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F1F471627D4BA2100C85173 /* HomeView.swift in Sources */,
 				3FD1C15427D34C5200F69DE7 /* ContentView.swift in Sources */,
 				3FD1C15227D34C5200F69DE7 /* CloneDanggeunMarketApp.swift in Sources */,
 			);

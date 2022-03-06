@@ -10,7 +10,7 @@ import UIKit
 
 struct ContentView: View {
 
-    @State private var tabBarSelection = 0
+    @State private var tabBarSelection = 1
     
     var body: some View {
         
@@ -20,7 +20,7 @@ struct ContentView: View {
                 Label("홈", systemImage: "house")
             }.tag(0)
             
-            Text("동네생활").tabItem {
+            LocalLifeView().tabItem {
                 Label("동네생활", systemImage: "newspaper")
             }.tag(1)
             Text("내 근처").tabItem {
@@ -35,94 +35,54 @@ struct ContentView: View {
         }.accentColor(Color.black)
         .onAppear() {
             UITabBar.appearance().tintColor = .black
-            //UITabBar.appearance().unselectedItemTintColor = UIColor.black
         }
            
     }
 }
-//상단 바 (위치 리스트 버튼, 검색, 카테고리, 알림)
 
-//중고 거래 글 (미리보기 사진, 글 제목, 설명)
-struct HomeView: View {
-        
-    var body: some View {
+struct LocalLifeView: View {
+    // 상단 탭바 가져오기
+    // 카테고리
+    // 글
+    var body: some View{
         NavigationView{
-                HomeView_List()
+                LocalLifeView_Main()
                     .toolbar {
                         ToolbarItem(placement: .navigationBarLeading) {
-                            HomeView_ToolBarItem_SelectedLocation()
+                            LocalLifeView_ToolBarItem_NavigationBarLeading()
                             
                         }
                         
                         ToolbarItem(placement: .navigationBarTrailing) {
-                            HStack(spacing:10){
-                                Image(systemName: "magnifyingglass")
-                                    .font(.callout)
-                                
-                                Image(systemName: "text.justify")
-                                    .font(.callout)
-                                
-                                Image(systemName: "bell")
-                                    .font(.callout)
-                                
-                            }
+                            LocalLifeView_ToolBarItem_NavigationBarTrailing()
                         }
                 }.navigationBarTitleDisplayMode(.inline)
             
         }
     }
 }
-
-struct HomeView_List: View {
-    var body: some View {
-        GeometryReader{ geometry in
-            VStack{
-                List{
-                    ForEach(0..<10){ index in
-                  
-                        HStack(spacing: 10) {
-
-                            Image("999846")
-                                .resizable()
-                                .cornerRadius(8)
-                                .aspectRatio(1, contentMode: .fit)
-                                
-
-                            VStack(alignment: .leading, spacing: 3) {
-                                Text("워크맨 일본 카세트 플레이 오브제")
-                                    .font(.callout)
-                                    .fontWeight(.light)
-                                    .lineLimit(2)
-                                    
-                                Text("목동 . 2분 전")
-                                    .fontWeight(.thin)
-                                    .lineLimit(1)
-                                    .font(.footnote)
-                                    .foregroundColor(.gray)
-                                
-                                Text("100,000"+"원")
-                                    .fontWeight(.semibold)
-                                    .lineLimit(1)
-                                
-                                Spacer()
-                            }
-                    
-                        }
-                        .padding(.vertical, 10.0)
-                        .frame(width: geometry.size.width * 0.9, height: geometry.size.width/3,alignment: .leading)
-
-                    }
-                }
-                .listStyle(InsetListStyle())
-                .onAppear(){
-                    UITableView.appearance().separatorInset = UIEdgeInsets(top: 0, left: 18, bottom: 0, right: 18)
+struct LocalLifeView_Main: View{
+    
+    init() {
+        UITableView.appearance().sectionFooterHeight = 5
+        UITableView.appearance().sectionHeaderHeight = 0
+    }
+    
+    var body: some View{
+        
+        List{
+            ForEach(0..<10){ _ in
+                Section {
+                    Text("d")
                 }
             }
-        }
+        }.listStyle(.grouped)
+
+        
     }
 }
 
-struct HomeView_ToolBarItem_SelectedLocation: View {
+struct LocalLifeView_ToolBarItem_NavigationBarLeading: View {
     @State private var selectedLocation = 0
     @State private var isArrowUp = true
     @State private var rotateAngle:Double = 0
@@ -167,6 +127,23 @@ struct HomeView_ToolBarItem_SelectedLocation: View {
         rotateAngle += 180
     }
 }
+
+struct LocalLifeView_ToolBarItem_NavigationBarTrailing: View {
+    var body: some View{
+        HStack(spacing:10){
+            Image(systemName: "magnifyingglass")
+                .font(.callout)
+            
+            Image(systemName: "text.badge.star")
+                .font(.callout)
+            
+            Image(systemName: "bell")
+                .font(.callout)
+            
+        }
+    }
+}
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
