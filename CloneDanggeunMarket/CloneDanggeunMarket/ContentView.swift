@@ -6,9 +6,10 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct ContentView: View {
-   
+
     @State private var tabBarSelection = 0
     
     var body: some View {
@@ -26,14 +27,17 @@ struct ContentView: View {
                 Label("내 근처", systemImage: "mappin.and.ellipse")
             }.tag(2)
             Text("채팅").tabItem {
-                Label("채팅", systemImage: "message")
+                Label("채팅", systemImage: "message.circle")
             }.tag(3)
             Text("나의 당근").tabItem {
                 Label("나의 당근", systemImage: "person")
             }.tag(4)
         }.accentColor(Color.black)
-        .background(Color.white)
-        
+        .onAppear() {
+            UITabBar.appearance().tintColor = .black
+            //UITabBar.appearance().unselectedItemTintColor = UIColor.black
+        }
+           
     }
 }
 //상단 바 (위치 리스트 버튼, 검색, 카테고리, 알림)
@@ -45,12 +49,26 @@ struct HomeView: View {
         NavigationView{
                 HomeView_List()
                     .toolbar {
-                    ToolbarItem(placement: .navigationBarLeading) {
+                        ToolbarItem(placement: .navigationBarLeading) {
+                            HomeView_ToolBarItem_SelectedLocation()
+                            
+                        }
                         
-                        HomeView_ToolBarItem_SelectedLocation()
-
-                    }
+                        ToolbarItem(placement: .navigationBarTrailing) {
+                            HStack(spacing:10){
+                                Image(systemName: "magnifyingglass")
+                                    .font(.callout)
+                                
+                                Image(systemName: "text.justify")
+                                    .font(.callout)
+                                
+                                Image(systemName: "bell")
+                                    .font(.callout)
+                                
+                            }
+                        }
                 }.navigationBarTitleDisplayMode(.inline)
+            
         }
     }
 }
@@ -64,7 +82,7 @@ struct HomeView_List: View {
                   
                         HStack(spacing: 10) {
 
-                            Image("994669")
+                            Image("999846")
                                 .resizable()
                                 .cornerRadius(8)
                                 .aspectRatio(1, contentMode: .fit)
@@ -107,30 +125,46 @@ struct HomeView_List: View {
 struct HomeView_ToolBarItem_SelectedLocation: View {
     @State private var selectedLocation = 0
     @State private var isArrowUp = true
+    @State private var rotateAngle:Double = 0
     var storedLocation = ["공릉 1동","오륜동","잠실 2동"]
+    
     
     var body: some View{
         
         HStack(spacing: 0){
-            
-            Picker("", selection: $selectedLocation) {
+            Menu{
                 ForEach(0..<storedLocation.count){ index in
-                    Text("\(storedLocation[index])")
-                        .font(.largeTitle)
-                        .tag(index)
+                    Button {
+                        isArrowUp.toggle()
+                        updateRotateAngle()
+                        selectedLocation = index
+                    } label: {
+                        Text("\(storedLocation[index])")
+                    }.tag(index)
+                    
                 }
-                
+            } label: {
+                Text("\(storedLocation[selectedLocation])")
+                    .font(.title2)
+                    .fontWeight(.semibold)
             }
-            .pickerStyle(MenuPickerStyle())
-            .onTapGesture { isArrowUp.toggle() }
-            .onChange(of: selectedLocation) { _ in
+            .onTapGesture {
                 isArrowUp.toggle()
+                updateRotateAngle()
             }
+            .id(selectedLocation)
             
-            Image(systemName: isArrowUp ? "arrow.up" : "arrow.down").animation(.easeInOut)
-            
+            Text("^")
+                .font(.headline)
+                .fontWeight(.semibold)
+                .rotationEffect(Angle(degrees: rotateAngle))
+                .animation(.easeOut, value: isArrowUp)
         }
         
+    }
+    
+    func updateRotateAngle(){
+        rotateAngle += 180
     }
 }
 
