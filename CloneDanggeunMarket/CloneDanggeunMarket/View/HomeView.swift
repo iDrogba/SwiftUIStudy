@@ -30,48 +30,64 @@ struct HomeView: View {
 struct HomeView_Main: View {
     var body: some View {
         GeometryReader{ geometry in
-            VStack{
-                List{
-                    ForEach(0..<10){ index in
-                  
-                        HStack(spacing: 10) {
+            ZStack{
+                VStack{
+                    List{
+                        ForEach(0..<10){ index in
+                      
+                            HStack(spacing: 10) {
 
-                            Image("999846")
-                                .resizable()
-                                .cornerRadius(8)
-                                .aspectRatio(1, contentMode: .fit)
-                                
-
-                            VStack(alignment: .leading, spacing: 3) {
-                                Text("워크맨 일본 카세트 플레이 오브제")
-                                    .font(.callout)
-                                    .fontWeight(.light)
-                                    .lineLimit(2)
+                                Image("999846")
+                                    .resizable()
+                                    .cornerRadius(8)
+                                    .aspectRatio(1, contentMode: .fit)
                                     
-                                Text("목동 . 2분 전")
-                                    .fontWeight(.thin)
-                                    .lineLimit(1)
-                                    .font(.footnote)
-                                    .foregroundColor(.gray)
-                                
-                                Text("100,000"+"원")
-                                    .fontWeight(.semibold)
-                                    .lineLimit(1)
-                                
-                                Spacer()
-                            }
-                    
-                        }
-                        .padding(.vertical, 10.0)
-                        .frame(width: geometry.size.width * 0.9, height: geometry.size.width/3,alignment: .leading)
 
+                                VStack(alignment: .leading, spacing: 3) {
+                                    Text("워크맨 일본 카세트 플레이 오브제")
+                                        .font(.callout)
+                                        .fontWeight(.light)
+                                        .lineLimit(2)
+                                        
+                                    Text("목동 . 2분 전")
+                                        .fontWeight(.thin)
+                                        .lineLimit(1)
+                                        .font(.footnote)
+                                        .foregroundColor(.gray)
+                                    
+                                    Text("100,000"+"원")
+                                        .fontWeight(.semibold)
+                                        .lineLimit(1)
+                                    
+                                    Spacer()
+                                }
+                        
+                            }
+                            .padding(.vertical, 10.0)
+                            .frame(width: geometry.size.width * 0.9, height: geometry.size.width/3,alignment: .leading)
+
+                        }
+                    }
+                    .listStyle(InsetListStyle())
+                    .onAppear(){
+                        UITableView.appearance().separatorInset = UIEdgeInsets(top: 0, left: 18, bottom: 0, right: 18)
                     }
                 }
-                .listStyle(InsetListStyle())
-                .onAppear(){
-                    UITableView.appearance().separatorInset = UIEdgeInsets(top: 0, left: 18, bottom: 0, right: 18)
+                
+                VStack{
+                    Spacer()
+                    HStack{
+                        Spacer()
+                        Image(systemName: "plus.circle.fill")
+                            .resizable()
+                            .frame(width: UIScreen.main.bounds.size.width/8, height: UIScreen.main.bounds.size.width/8, alignment: .center)
+                            .foregroundColor(.orange)
+                            .background(.white)
+                            .padding()
+                    }
                 }
             }
+            
         }
     }
 }

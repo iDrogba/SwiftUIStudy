@@ -10,7 +10,7 @@ import UIKit
 
 struct ContentView: View {
 
-    @State private var tabBarSelection = 1
+    @State private var tabBarSelection = 0
     
     var body: some View {
         
@@ -56,7 +56,8 @@ struct LocalLifeView: View {
                         ToolbarItem(placement: .navigationBarTrailing) {
                             LocalLifeView_ToolBarItem_NavigationBarTrailing()
                         }
-                }.navigationBarTitleDisplayMode(.inline)
+                    }.navigationBarTitleDisplayMode(.inline)
+                
             
         }
     }
@@ -89,12 +90,12 @@ struct LocalLifeView_Main: View{
                                         }
                                     
                                     Text("하계동 주짓수 파라에스트라 체육관관비가 궁금한데 관비만 여쭤보기엔 전화 상담이나 디엠이 좀 죄송하더라구요...성인반 관비 혹시 알 수 있을까요")
-                                        .font(.footnote)
+                                        .font(.callout)
                                         .fontWeight(.light)
                                         .padding(.vertical)
                                     
                                     HStack{
-                                        Text("만두")
+                                        Text("himheys")
                                             .font(.caption)
                                             .fontWeight(.ultraLight)
                                         Text("공릉 2동")
@@ -133,21 +134,18 @@ struct LocalLifeView_Main: View{
                                     }.foregroundColor(.gray)
                                 }
                                 
-                                
-                                
-                                
                             }.padding(.vertical, 10.0)
                                 .frame(width: geometry.size.width * 0.9)
                         }
                     
                 }
-                .headerProminence(.standard)
                 .listStyle(GroupedListStyle())
                 .onAppear(){
                     UITableView.appearance().separatorInset = UIEdgeInsets(top: 0, left: 18, bottom: 0, right: 18)
                 }
                 
             }
+            
         }
     }
 }
