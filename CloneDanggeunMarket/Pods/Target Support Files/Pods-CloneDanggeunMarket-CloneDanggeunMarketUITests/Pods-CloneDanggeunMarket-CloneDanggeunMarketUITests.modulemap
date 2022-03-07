@@ -1,0 +1,6 @@
+framework module Pods_CloneDanggeunMarket_CloneDanggeunMarketUITests {
+  umbrella header "Pods-CloneDanggeunMarket-CloneDanggeunMarketUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

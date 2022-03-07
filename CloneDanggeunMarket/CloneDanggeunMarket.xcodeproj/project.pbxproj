@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3F1F471627D4BA2100C85173 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1F471527D4BA2100C85173 /* HomeView.swift */; };
+		3F30D85527D645F0007A3AF4 /* LocalLifeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F30D85427D645F0007A3AF4 /* LocalLifeView.swift */; };
 		3FD1C15227D34C5200F69DE7 /* CloneDanggeunMarketApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD1C15127D34C5200F69DE7 /* CloneDanggeunMarketApp.swift */; };
 		3FD1C15427D34C5200F69DE7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD1C15327D34C5200F69DE7 /* ContentView.swift */; };
 		3FD1C15627D34C5300F69DE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FD1C15527D34C5300F69DE7 /* Assets.xcassets */; };
@@ -17,6 +18,9 @@
 		3FD1C16F27D34C5400F69DE7 /* CloneDanggeunMarketUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD1C16E27D34C5400F69DE7 /* CloneDanggeunMarketUITestsLaunchTests.swift */; };
 		3FD1C17C27D38A9800F69DE7 /* 999846.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FD1C17B27D38A9700F69DE7 /* 999846.jpg */; };
 		3FD1C17E27D38AA600F69DE7 /* 994669.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FD1C17D27D38AA600F69DE7 /* 994669.jpg */; };
+		AE30D31F9AAD48BE5DFF1A74 /* Pods_CloneDanggeunMarketTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F070820AF026DAAC8C132E3 /* Pods_CloneDanggeunMarketTests.framework */; };
+		AEFB161A37AE7E7DB8C05722 /* Pods_CloneDanggeunMarket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2EB6B035E6E0D742E0132DA /* Pods_CloneDanggeunMarket.framework */; };
+		C514B6064E88593DA07944DB /* Pods_CloneDanggeunMarket_CloneDanggeunMarketUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 460A28E922ABEAF62BE06C6E /* Pods_CloneDanggeunMarket_CloneDanggeunMarketUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +41,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F070820AF026DAAC8C132E3 /* Pods_CloneDanggeunMarketTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CloneDanggeunMarketTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2723CB9E3CCEC1AC85603AA5 /* Pods-CloneDanggeunMarketTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloneDanggeunMarketTests.release.xcconfig"; path = "Target Support Files/Pods-CloneDanggeunMarketTests/Pods-CloneDanggeunMarketTests.release.xcconfig"; sourceTree = "<group>"; };
+		2E4DB0E720F07E5B59EFEC13 /* Pods-CloneDanggeunMarketTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloneDanggeunMarketTests.debug.xcconfig"; path = "Target Support Files/Pods-CloneDanggeunMarketTests/Pods-CloneDanggeunMarketTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3F1F471527D4BA2100C85173 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		3F30D85427D645F0007A3AF4 /* LocalLifeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalLifeView.swift; sourceTree = "<group>"; };
 		3FD1C14E27D34C5200F69DE7 /* CloneDanggeunMarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloneDanggeunMarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FD1C15127D34C5200F69DE7 /* CloneDanggeunMarketApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloneDanggeunMarketApp.swift; sourceTree = "<group>"; };
 		3FD1C15327D34C5200F69DE7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -50,6 +58,12 @@
 		3FD1C16E27D34C5400F69DE7 /* CloneDanggeunMarketUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloneDanggeunMarketUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3FD1C17B27D38A9700F69DE7 /* 999846.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 999846.jpg; sourceTree = "<group>"; };
 		3FD1C17D27D38AA600F69DE7 /* 994669.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 994669.jpg; sourceTree = "<group>"; };
+		460A28E922ABEAF62BE06C6E /* Pods_CloneDanggeunMarket_CloneDanggeunMarketUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CloneDanggeunMarket_CloneDanggeunMarketUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9003DEAC38D15E0E1B2C13EC /* Pods-CloneDanggeunMarket-CloneDanggeunMarketUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloneDanggeunMarket-CloneDanggeunMarketUITests.release.xcconfig"; path = "Target Support Files/Pods-CloneDanggeunMarket-CloneDanggeunMarketUITests/Pods-CloneDanggeunMarket-CloneDanggeunMarketUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CD6B3EFCDB66A2C5764B1904 /* Pods-CloneDanggeunMarket-CloneDanggeunMarketUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloneDanggeunMarket-CloneDanggeunMarketUITests.debug.xcconfig"; path = "Target Support Files/Pods-CloneDanggeunMarket-CloneDanggeunMarketUITests/Pods-CloneDanggeunMarket-CloneDanggeunMarketUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E12EC5E3FCCE841A4BCB0CCF /* Pods-CloneDanggeunMarket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloneDanggeunMarket.debug.xcconfig"; path = "Target Support Files/Pods-CloneDanggeunMarket/Pods-CloneDanggeunMarket.debug.xcconfig"; sourceTree = "<group>"; };
+		E3AE79DB4D125D5927D0BF5F /* Pods-CloneDanggeunMarket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloneDanggeunMarket.release.xcconfig"; path = "Target Support Files/Pods-CloneDanggeunMarket/Pods-CloneDanggeunMarket.release.xcconfig"; sourceTree = "<group>"; };
+		F2EB6B035E6E0D742E0132DA /* Pods_CloneDanggeunMarket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CloneDanggeunMarket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEFB161A37AE7E7DB8C05722 /* Pods_CloneDanggeunMarket.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE30D31F9AAD48BE5DFF1A74 /* Pods_CloneDanggeunMarketTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C514B6064E88593DA07944DB /* Pods_CloneDanggeunMarket_CloneDanggeunMarketUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				3F1F471527D4BA2100C85173 /* HomeView.swift */,
+				3F30D85427D645F0007A3AF4 /* LocalLifeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -92,6 +110,8 @@
 				3FD1C16127D34C5400F69DE7 /* CloneDanggeunMarketTests */,
 				3FD1C16B27D34C5400F69DE7 /* CloneDanggeunMarketUITests */,
 				3FD1C14F27D34C5200F69DE7 /* Products */,
+				704564F5125C2EB84AAA890A /* Pods */,
+				D0A022EDA9F9573A8DC49A2F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,6 +164,30 @@
 			path = CloneDanggeunMarketUITests;
 			sourceTree = "<group>";
 		};
+		704564F5125C2EB84AAA890A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E12EC5E3FCCE841A4BCB0CCF /* Pods-CloneDanggeunMarket.debug.xcconfig */,
+				E3AE79DB4D125D5927D0BF5F /* Pods-CloneDanggeunMarket.release.xcconfig */,
+				CD6B3EFCDB66A2C5764B1904 /* Pods-CloneDanggeunMarket-CloneDanggeunMarketUITests.debug.xcconfig */,
+				9003DEAC38D15E0E1B2C13EC /* Pods-CloneDanggeunMarket-CloneDanggeunMarketUITests.release.xcconfig */,
+				2E4DB0E720F07E5B59EFEC13 /* Pods-CloneDanggeunMarketTests.debug.xcconfig */,
+				2723CB9E3CCEC1AC85603AA5 /* Pods-CloneDanggeunMarketTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D0A022EDA9F9573A8DC49A2F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F2EB6B035E6E0D742E0132DA /* Pods_CloneDanggeunMarket.framework */,
+				460A28E922ABEAF62BE06C6E /* Pods_CloneDanggeunMarket_CloneDanggeunMarketUITests.framework */,
+				0F070820AF026DAAC8C132E3 /* Pods_CloneDanggeunMarketTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -151,9 +195,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3FD1C17227D34C5400F69DE7 /* Build configuration list for PBXNativeTarget "CloneDanggeunMarket" */;
 			buildPhases = (
+				31B5E8F0F5A9F50F488E3401 /* [CP] Check Pods Manifest.lock */,
 				3FD1C14A27D34C5200F69DE7 /* Sources */,
 				3FD1C14B27D34C5200F69DE7 /* Frameworks */,
 				3FD1C14C27D34C5200F69DE7 /* Resources */,
+				5DEB9AD2975D8E8B1986D7EE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -168,6 +214,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3FD1C17527D34C5400F69DE7 /* Build configuration list for PBXNativeTarget "CloneDanggeunMarketTests" */;
 			buildPhases = (
+				E218EC1943F2702DB00BE9F2 /* [CP] Check Pods Manifest.lock */,
 				3FD1C15A27D34C5400F69DE7 /* Sources */,
 				3FD1C15B27D34C5400F69DE7 /* Frameworks */,
 				3FD1C15C27D34C5400F69DE7 /* Resources */,
@@ -186,9 +233,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3FD1C17827D34C5400F69DE7 /* Build configuration list for PBXNativeTarget "CloneDanggeunMarketUITests" */;
 			buildPhases = (
+				4045B0C804E594B0FB7ADE5C /* [CP] Check Pods Manifest.lock */,
 				3FD1C16427D34C5400F69DE7 /* Sources */,
 				3FD1C16527D34C5400F69DE7 /* Frameworks */,
 				3FD1C16627D34C5400F69DE7 /* Resources */,
+				2D179301080BAA0E3A914ECD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -271,11 +320,115 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2D179301080BAA0E3A914ECD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CloneDanggeunMarket-CloneDanggeunMarketUITests/Pods-CloneDanggeunMarket-CloneDanggeunMarketUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CloneDanggeunMarket-CloneDanggeunMarketUITests/Pods-CloneDanggeunMarket-CloneDanggeunMarketUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CloneDanggeunMarket-CloneDanggeunMarketUITests/Pods-CloneDanggeunMarket-CloneDanggeunMarketUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		31B5E8F0F5A9F50F488E3401 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CloneDanggeunMarket-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4045B0C804E594B0FB7ADE5C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CloneDanggeunMarket-CloneDanggeunMarketUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5DEB9AD2975D8E8B1986D7EE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CloneDanggeunMarket/Pods-CloneDanggeunMarket-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CloneDanggeunMarket/Pods-CloneDanggeunMarket-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CloneDanggeunMarket/Pods-CloneDanggeunMarket-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E218EC1943F2702DB00BE9F2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CloneDanggeunMarketTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3FD1C14A27D34C5200F69DE7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F30D85527D645F0007A3AF4 /* LocalLifeView.swift in Sources */,
 				3F1F471627D4BA2100C85173 /* HomeView.swift in Sources */,
 				3FD1C15427D34C5200F69DE7 /* ContentView.swift in Sources */,
 				3FD1C15227D34C5200F69DE7 /* CloneDanggeunMarketApp.swift in Sources */,
@@ -433,12 +586,14 @@
 		};
 		3FD1C17327D34C5400F69DE7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E12EC5E3FCCE841A4BCB0CCF /* Pods-CloneDanggeunMarket.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CloneDanggeunMarket/Preview Content\"";
+				DEVELOPMENT_TEAM = ZNH7978JJQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -461,12 +616,14 @@
 		};
 		3FD1C17427D34C5400F69DE7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3AE79DB4D125D5927D0BF5F /* Pods-CloneDanggeunMarket.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CloneDanggeunMarket/Preview Content\"";
+				DEVELOPMENT_TEAM = ZNH7978JJQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -489,6 +646,7 @@
 		};
 		3FD1C17627D34C5400F69DE7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E4DB0E720F07E5B59EFEC13 /* Pods-CloneDanggeunMarketTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -508,6 +666,7 @@
 		};
 		3FD1C17727D34C5400F69DE7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2723CB9E3CCEC1AC85603AA5 /* Pods-CloneDanggeunMarketTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -527,6 +686,7 @@
 		};
 		3FD1C17927D34C5400F69DE7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD6B3EFCDB66A2C5764B1904 /* Pods-CloneDanggeunMarket-CloneDanggeunMarketUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -544,6 +704,7 @@
 		};
 		3FD1C17A27D34C5400F69DE7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9003DEAC38D15E0E1B2C13EC /* Pods-CloneDanggeunMarket-CloneDanggeunMarketUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
