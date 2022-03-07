@@ -13,7 +13,6 @@ struct ContentView: View {
     @State private var tabBarSelection = 0
     
     var body: some View {
-        
         TabView(selection: $tabBarSelection) {
             
             HomeView().tabItem {
@@ -32,11 +31,9 @@ struct ContentView: View {
             Text("나의 당근").tabItem {
                 Label("나의 당근", systemImage: "person")
             }.tag(4)
-        }.accentColor(Color.black)
-        .onAppear() {
-            UITabBar.appearance().tintColor = .black
         }
-           
+        .accentColor(Color.black)
+        .onAppear() { UITabBar.appearance().tintColor = .black }
     }
 }
 
@@ -74,70 +71,68 @@ struct LocalLifeView_Main: View{
         GeometryReader{ geometry in
             VStack{
                 List{
-        
-                        ForEach(0..<20){ _ in
-                            Section {
-                                
-                                VStack(alignment: .leading, spacing: 0){
-                                    Rectangle()
-                                        .frame(width: UIScreen.main.bounds.size.width/10, height: 20)
-                                        .foregroundColor(Color(UIColor.systemGray6))
-                                        .cornerRadius(5)
-                                        .overlay{
-                                            Text("질문")
-                                                .font(.caption)
-                                                .fontWeight(.ultraLight)
-                                        }
-                                    
-                                    Text("하계동 주짓수 파라에스트라 체육관관비가 궁금한데 관비만 여쭤보기엔 전화 상담이나 디엠이 좀 죄송하더라구요...성인반 관비 혹시 알 수 있을까요")
-                                        .font(.callout)
-                                        .fontWeight(.light)
-                                        .padding(.vertical)
-                                    
-                                    HStack{
-                                        Text("himheys")
-                                            .font(.caption)
-                                            .fontWeight(.ultraLight)
-                                        Text("공릉 2동")
-                                            .font(.caption)
-                                            .fontWeight(.ultraLight)
-                                        
-                                        Spacer()
-                                        
-                                        Text("30분 전")
+                    ForEach(0..<20){ _ in
+                        Section {
+                            
+                            VStack(alignment: .leading, spacing: 0){
+                                Rectangle()
+                                    .frame(width: UIScreen.main.bounds.size.width/10, height: 20)
+                                    .foregroundColor(Color(UIColor.systemGray6))
+                                    .cornerRadius(5)
+                                    .overlay{
+                                        Text("질문")
                                             .font(.caption)
                                             .fontWeight(.ultraLight)
                                     }
+                                
+                                Text("하계동 주짓수 파라에스트라 체육관관비가 궁금한데 관비만 여쭤보기엔 전화 상담이나 디엠이 좀 죄송하더라구요...성인반 관비 혹시 알 수 있을까요")
+                                    .font(.callout)
+                                    .fontWeight(.light)
+                                    .padding(.vertical)
+                                
+                                HStack{
+                                    Text("himheys")
+                                        .font(.caption)
+                                        .fontWeight(.ultraLight)
+                                    Text("공릉 2동")
+                                        .font(.caption)
+                                        .fontWeight(.ultraLight)
                                     
                                     Spacer()
-                                    Divider()
-                                    Spacer()
-                                
-                                    HStack(spacing: 10){
-                                        HStack(spacing: 5){
-                                            Image(systemName: "face.smiling")
-                                                .font(.caption)
-                                            
-                                            Text("공감하기")
-                                                .font(.caption)
-                                                .fontWeight(.thin)
-                                        }
-                                        
-                                        HStack(spacing: 5){
-                                            Image(systemName: "message")
-                                                .font(.caption)
-                                            
-                                            Text("댓글 쓰기")
-                                                .font(.caption)
-                                                .fontWeight(.thin)
-                                        }
-                                    }.foregroundColor(.gray)
+                                    
+                                    Text("30분 전")
+                                        .font(.caption)
+                                        .fontWeight(.ultraLight)
                                 }
                                 
-                            }.padding(.vertical, 10.0)
-                                .frame(width: geometry.size.width * 0.9)
-                        }
-                    
+                                Spacer()
+                                Divider()
+                                Spacer()
+                            
+                                HStack(spacing: 10){
+                                    HStack(spacing: 5){
+                                        Image(systemName: "face.smiling")
+                                            .font(.caption)
+                                        
+                                        Text("공감하기")
+                                            .font(.caption)
+                                            .fontWeight(.thin)
+                                    }
+                                    
+                                    HStack(spacing: 5){
+                                        Image(systemName: "message")
+                                            .font(.caption)
+                                        
+                                        Text("댓글 쓰기")
+                                            .font(.caption)
+                                            .fontWeight(.thin)
+                                    }
+                                }.foregroundColor(.gray)
+                            }
+                            
+                        }.padding(.vertical, 10.0)
+                            .frame(width: geometry.size.width * 0.9)
+                    }
                 }
                 .listStyle(GroupedListStyle())
                 .onAppear(){

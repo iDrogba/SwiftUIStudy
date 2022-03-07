@@ -29,65 +29,88 @@ struct HomeView: View {
 
 struct HomeView_Main: View {
     var body: some View {
+        ZStack{
+            HomeView_Main_List()
+            HomeView_Main_OrangeButton()
+        }
+    }
+}
+
+struct HomeView_Main_List: View {
+    var body: some View{
         GeometryReader{ geometry in
-            ZStack{
-                VStack{
-                    List{
-                        ForEach(0..<10){ index in
-                      
-                            HStack(spacing: 10) {
-
-                                Image("999846")
-                                    .resizable()
-                                    .cornerRadius(8)
-                                    .aspectRatio(1, contentMode: .fit)
-                                    
-
-                                VStack(alignment: .leading, spacing: 3) {
-                                    Text("워크맨 일본 카세트 플레이 오브제")
-                                        .font(.callout)
-                                        .fontWeight(.light)
-                                        .lineLimit(2)
-                                        
-                                    Text("목동 . 2분 전")
-                                        .fontWeight(.thin)
-                                        .lineLimit(1)
-                                        .font(.footnote)
-                                        .foregroundColor(.gray)
-                                    
-                                    Text("100,000"+"원")
-                                        .fontWeight(.semibold)
-                                        .lineLimit(1)
-                                    
-                                    Spacer()
-                                }
+            VStack{
+                List{
+                    ForEach(0..<10){ index in
                         
-                            }
-                            .padding(.vertical, 10.0)
-                            .frame(width: geometry.size.width * 0.9, height: geometry.size.width/3,alignment: .leading)
+                        HStack(spacing: 10) {
+                            Image("999846")
+                                .resizable()
+                                .cornerRadius(8)
+                                .aspectRatio(1, contentMode: .fit)
+                                
 
+                            VStack(alignment: .leading, spacing: 3) {
+                                Text("워크맨 일본 카세트 플레이 오브제")
+                                    .font(.callout)
+                                    .fontWeight(.light)
+                                    .lineLimit(2)
+                                    
+                                Text("목동 . 2분 전")
+                                    .fontWeight(.thin)
+                                    .lineLimit(1)
+                                    .font(.footnote)
+                                    .foregroundColor(.gray)
+                                
+                                Text("100,000"+"원")
+                                    .fontWeight(.semibold)
+                                    .lineLimit(1)
+                                
+                                Spacer()
+                                
+                                HStack(spacing: 2){
+                                    Spacer()
+                                    
+                                    HStack(spacing:1){
+                                        Image(systemName: "message")
+                                            .foregroundColor(.gray)
+                                        Text("3")
+                                    }
+                                    HStack(spacing:1){
+                                        Image(systemName: "heart")
+                                            .foregroundColor(.gray)
+                                        Text("5")
+                                    }
+                                }.font(.footnote)
+                            }
                         }
-                    }
-                    .listStyle(InsetListStyle())
-                    .onAppear(){
-                        UITableView.appearance().separatorInset = UIEdgeInsets(top: 0, left: 18, bottom: 0, right: 18)
+                        .padding(.vertical, 10.0)
+                        .frame(width: geometry.size.width * 0.9, height: geometry.size.width/3,alignment: .leading)
+                        
                     }
                 }
-                
-                VStack{
-                    Spacer()
-                    HStack{
-                        Spacer()
-                        Image(systemName: "plus.circle.fill")
-                            .resizable()
-                            .frame(width: UIScreen.main.bounds.size.width/8, height: UIScreen.main.bounds.size.width/8, alignment: .center)
-                            .foregroundColor(.orange)
-                            .background(.white)
-                            .padding()
-                    }
+                .listStyle(InsetListStyle())
+                .onAppear(){
+                    UITableView.appearance().separatorInset = UIEdgeInsets(top: 0, left: 18, bottom: 0, right: 18)
                 }
             }
-            
+        }
+    }
+}
+
+struct HomeView_Main_OrangeButton: View {
+    var body: some View{
+        VStack{
+            Spacer()
+            HStack{
+                Spacer()
+                Image(systemName: "plus.circle.fill")
+                    .resizable()
+                    .frame(width: UIScreen.main.bounds.size.width/8, height: UIScreen.main.bounds.size.width/8, alignment: .center)
+                    .foregroundColor(.orange)
+                    .background(.white)
+                    .padding()
+            }
         }
     }
 }
@@ -149,7 +172,6 @@ struct HomView_ToolBarItem_NavigationBarTrailing: View {
             
             Image(systemName: "bell")
                 .font(.callout)
-            
         }
     }
 }
