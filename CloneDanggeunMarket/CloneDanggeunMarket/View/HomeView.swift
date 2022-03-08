@@ -6,19 +6,9 @@
 //
 import SwiftUI
 import Foundation
-import Alamofire
-
-
-struct Post_Danggeun_Model: Codable {
-    var createdAt: String?
-    var name: String?
-    var image: String?
-    var address: String?
-    var price: String?
-    var id: String?
-}
 
 struct HomeView: View {
+    @EnvironmentObject var homeView_ViewModel : HomeView_ViewModel
         
     var body: some View {
         NavigationView{

@@ -10,9 +10,8 @@ import UIKit
 import Alamofire
 
 struct ContentView: View {
-
     @State private var tabBarSelection = 0
-    
+
     var body: some View {
         TabView(selection: $tabBarSelection) {
             
@@ -35,6 +34,49 @@ struct ContentView: View {
         }
         .accentColor(Color.black)
         .onAppear() { UITabBar.appearance().tintColor = .black }
+    }
+}
+
+struct HomeView_Post_Model: Codable, Identifiable {
+    var id: Int?
+    var createdAt: String?
+    var name: String?
+    var image: String?
+    var address: String?
+    var price: String?
+}
+
+class HomeView_ViewModel: ObservableObject {
+    var homeView_Post_Model = [HomeView_Post_Model]()
+    
+    func netWork_HomeView_Post_Model(){
+        
+    }
+}
+
+struct NetWorkCenter {
+    let baseAddress = "https://62260bc92dfa524018fa721d.mockapi.io"
+    
+    func netWork(select: SelectModel){
+        let url = makeUrl(select: select)
+        AF.request(url, method: .get).responseJSON { response in
+            
+        }
+    }
+    
+    enum SelectModel {
+        case HomeView_Post_Model
+        case LocalView_Post_Model
+    }
+    
+    func makeUrl(select : SelectModel) -> URL {
+        switch select {
+        case .HomeView_Post_Model:
+            return URL(string: baseAddress + "/post_dangguen")!
+        
+        case .LocalView_Post_Model:
+            return URL(string: baseAddress + "/post_localview")!
+        }
     }
 }
 

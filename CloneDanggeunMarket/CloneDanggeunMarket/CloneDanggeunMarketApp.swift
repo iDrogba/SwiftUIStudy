@@ -11,7 +11,9 @@ import SwiftUI
 struct CloneDanggeunMarketApp: App {
     var body: some Scene {
         WindowGroup {
+            let homeView_ViewModel = HomeView_ViewModel()
             ContentView()
+                .environmentObject(homeView_ViewModel)
         }
     }
 }
