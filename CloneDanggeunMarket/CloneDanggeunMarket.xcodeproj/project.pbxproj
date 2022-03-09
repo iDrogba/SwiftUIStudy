@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		3F1F471627D4BA2100C85173 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1F471527D4BA2100C85173 /* HomeView.swift */; };
 		3F30D85527D645F0007A3AF4 /* LocalLifeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F30D85427D645F0007A3AF4 /* LocalLifeView.swift */; };
+		3F67A99927D8B7250038D218 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F67A99827D8B7250038D218 /* HomeViewModel.swift */; };
+		3F67A99B27D8B7360038D218 /* LocalLifeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F67A99A27D8B7360038D218 /* LocalLifeViewModel.swift */; };
+		3F67A99D27D8B7950038D218 /* NetWorkCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F67A99C27D8B7950038D218 /* NetWorkCenter.swift */; };
 		3FD1C15227D34C5200F69DE7 /* CloneDanggeunMarketApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD1C15127D34C5200F69DE7 /* CloneDanggeunMarketApp.swift */; };
 		3FD1C15427D34C5200F69DE7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD1C15327D34C5200F69DE7 /* ContentView.swift */; };
 		3FD1C15627D34C5300F69DE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FD1C15527D34C5300F69DE7 /* Assets.xcassets */; };
@@ -46,6 +49,9 @@
 		2E4DB0E720F07E5B59EFEC13 /* Pods-CloneDanggeunMarketTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloneDanggeunMarketTests.debug.xcconfig"; path = "Target Support Files/Pods-CloneDanggeunMarketTests/Pods-CloneDanggeunMarketTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3F1F471527D4BA2100C85173 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		3F30D85427D645F0007A3AF4 /* LocalLifeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalLifeView.swift; sourceTree = "<group>"; };
+		3F67A99827D8B7250038D218 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		3F67A99A27D8B7360038D218 /* LocalLifeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalLifeViewModel.swift; sourceTree = "<group>"; };
+		3F67A99C27D8B7950038D218 /* NetWorkCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkCenter.swift; sourceTree = "<group>"; };
 		3FD1C14E27D34C5200F69DE7 /* CloneDanggeunMarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloneDanggeunMarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FD1C15127D34C5200F69DE7 /* CloneDanggeunMarketApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloneDanggeunMarketApp.swift; sourceTree = "<group>"; };
 		3FD1C15327D34C5200F69DE7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -103,6 +109,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		3F67A99727D8B7120038D218 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3F67A99827D8B7250038D218 /* HomeViewModel.swift */,
+				3F67A99A27D8B7360038D218 /* LocalLifeViewModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		3FD1C14527D34C5200F69DE7 = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +143,7 @@
 		3FD1C15027D34C5200F69DE7 /* CloneDanggeunMarket */ = {
 			isa = PBXGroup;
 			children = (
+				3F67A99727D8B7120038D218 /* Model */,
 				3F1F471427D4BA1300C85173 /* View */,
 				3FD1C15127D34C5200F69DE7 /* CloneDanggeunMarketApp.swift */,
 				3FD1C15327D34C5200F69DE7 /* ContentView.swift */,
@@ -135,6 +151,7 @@
 				3FD1C17D27D38AA600F69DE7 /* 994669.jpg */,
 				3FD1C17B27D38A9700F69DE7 /* 999846.jpg */,
 				3FD1C15727D34C5300F69DE7 /* Preview Content */,
+				3F67A99C27D8B7950038D218 /* NetWorkCenter.swift */,
 			);
 			path = CloneDanggeunMarket;
 			sourceTree = "<group>";
@@ -174,7 +191,6 @@
 				2E4DB0E720F07E5B59EFEC13 /* Pods-CloneDanggeunMarketTests.debug.xcconfig */,
 				2723CB9E3CCEC1AC85603AA5 /* Pods-CloneDanggeunMarketTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -428,9 +444,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F67A99B27D8B7360038D218 /* LocalLifeViewModel.swift in Sources */,
 				3F30D85527D645F0007A3AF4 /* LocalLifeView.swift in Sources */,
 				3F1F471627D4BA2100C85173 /* HomeView.swift in Sources */,
 				3FD1C15427D34C5200F69DE7 /* ContentView.swift in Sources */,
+				3F67A99D27D8B7950038D218 /* NetWorkCenter.swift in Sources */,
+				3F67A99927D8B7250038D218 /* HomeViewModel.swift in Sources */,
 				3FD1C15227D34C5200F69DE7 /* CloneDanggeunMarketApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

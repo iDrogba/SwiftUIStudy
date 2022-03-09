@@ -7,7 +7,6 @@
 
 import SwiftUI
 import UIKit
-import Alamofire
 
 struct ContentView: View {
     @State private var tabBarSelection = 0
@@ -37,63 +36,6 @@ struct ContentView: View {
             UITabBar.appearance().tintColor = .black
         }
     }
-}
-
-struct HomeView_Post_Model: Codable, Identifiable {
-    let id: String
-    let createdAt: String
-    let title: String
-    let image: String
-    let address: String
-    let price: String
-}
-
-struct LocalView_Post_Model: Codable, Identifiable {
-    let id: String
-    let createdAt: String
-    let name: String
-}
-
-class HomeView_ViewModel: ObservableObject {
-    @Published var homeView_Post_Models = [HomeView_Post_Model]()
-    
-    func netWork_HomeView_Post_Model(){
-        
-    }
-}
-
-struct NetWorkCenter {
-            
-    func getHomeView_Post_Model(completion: @escaping ([HomeView_Post_Model]) -> Void){
-        guard let url = URL(string: "https://62260bc92dfa524018fa721d.mockapi.io/post_danggeun") else { return }
-        
-        AF.request(url).responseJSON { response in
-            print("response : "+"\(response)")
-
-            do {
-                let decoder = JSONDecoder()
-                switch response.result {
-
-                case .success(_):
-                    let result = try decoder.decode([HomeView_Post_Model].self, from: response.data!)
-                    
-                    completion(result)
-
-                case .failure(let error):
-                    print("errorCode: \(error._code)")
-                    print("errorDescription: \(error.errorDescription!)")
-                }
-            } catch let parsingError {
-                print("Error : ", parsingError)
-            }
-        }.resume()
-    }
-    
-    func getLocalView_Post_Model() {
-            guard let url = URL(string: "https://62260bc92dfa524018fa721d.mockapi.io/post_localview") else { return }
-            print("구현 중")
-    }
-
 }
 
 struct ContentView_Previews: PreviewProvider {
