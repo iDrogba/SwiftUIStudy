@@ -8,7 +8,6 @@ import SwiftUI
 import Foundation
 
 struct HomeView: View {
-    @EnvironmentObject var homeView_ViewModel : HomeView_ViewModel
         
     var body: some View {
         NavigationView{
@@ -20,10 +19,9 @@ struct HomeView: View {
                         }
                         
                         ToolbarItem(placement: .navigationBarTrailing) {
-                            HomView_ToolBarItem_NavigationBarTrailing()
+                            HomeView_ToolBarItem_NavigationBarTrailing()
                         }
                 }.navigationBarTitleDisplayMode(.inline)
-            
         }
     }
 }
@@ -38,11 +36,13 @@ struct HomeView_Main: View {
 }
 
 struct HomeView_Main_List: View {
+    @EnvironmentObject var homeView_ViewModel : HomeView_ViewModel
+    
     var body: some View{
         GeometryReader{ geometry in
             VStack{
                 List{
-                    ForEach(0..<10){ index in
+                    ForEach(homeView_ViewModel.homeView_Post_Models){ index in
                         
                         HStack(spacing: 10) {
                             Image("999846")
@@ -52,18 +52,18 @@ struct HomeView_Main_List: View {
                                 
 
                             VStack(alignment: .leading, spacing: 3) {
-                                Text("워크맨 일본 카세트 플레이 오브제")
+                                Text("\(index.title)")
                                     .font(.callout)
                                     .fontWeight(.light)
                                     .lineLimit(2)
                                     
-                                Text("목동 . 2분 전")
+                                Text("\(index.address) . \(index.createdAt)")
                                     .fontWeight(.thin)
                                     .lineLimit(1)
                                     .font(.footnote)
                                     .foregroundColor(.gray)
                                 
-                                Text("100,000"+"원")
+                                Text("\(index.price)$")
                                     .fontWeight(.semibold)
                                     .lineLimit(1)
                                 
@@ -92,6 +92,8 @@ struct HomeView_Main_List: View {
                 }
                 .listStyle(InsetListStyle())
                 .onAppear(){
+                    NetWorkCenter().getHomeView_Post_Model { results in
+                        self.homeView_ViewModel.homeView_Post_Models = results }
                     UITableView.appearance().separatorInset = UIEdgeInsets(top: 0, left: 18, bottom: 0, right: 18)
                 }
             }
@@ -162,7 +164,7 @@ struct HomeView_ToolBarItem_NavigationBarLeading: View {
     }
 }
 
-struct HomView_ToolBarItem_NavigationBarTrailing: View {
+struct HomeView_ToolBarItem_NavigationBarTrailing: View {
     var body: some View{
         HStack(spacing:10){
             Image(systemName: "magnifyingglass")

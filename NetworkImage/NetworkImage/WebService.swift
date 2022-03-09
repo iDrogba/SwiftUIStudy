@@ -24,10 +24,15 @@ class WebService {
 
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard let getData = data else{ return }
+             
+            do{
+                let users = try JSONDecoder().decode([User].self, from: getData)
+                completion(users)
+            }
+            catch let parsingError {
+                print("Error : ", parsingError)
+            }
             
-            let users = try! JSONDecoder().decode([User].self, from: getData)
-            
-            completion(users)
         }.resume()
     }
     
