@@ -41,15 +41,12 @@ struct HomeView_Main_List: View {
     var body: some View{
         GeometryReader{ geometry in
             VStack{
+                
                 List{
                     ForEach(homeView_ViewModel.homeView_Post_Models){ index in
-                        
                         HStack(spacing: 10) {
-                            Image("999846")
-                                .resizable()
-                                .cornerRadius(8)
-                                .aspectRatio(1, contentMode: .fit)
-                                
+                            
+                            HomeView_Main_List_Image(urlString: index.imageUrl)
 
                             VStack(alignment: .leading, spacing: 3) {
                                 Text("\(index.title)")
@@ -87,17 +84,31 @@ struct HomeView_Main_List: View {
                         }
                         .padding(.vertical, 10.0)
                         .frame(width: geometry.size.width * 0.9, height: geometry.size.width/3,alignment: .leading)
-                        
                     }
                 }
                 .listStyle(InsetListStyle())
                 .onAppear(){
-                    NetWorkCenter().getHomeView_Post_Model { results in
-                        self.homeView_ViewModel.homeView_Post_Models = results }
+                    homeView_ViewModel.netWork_HomeView_Post_Model()
                     UITableView.appearance().separatorInset = UIEdgeInsets(top: 0, left: 18, bottom: 0, right: 18)
                 }
+                
             }
         }
+    }
+}
+
+struct HomeView_Main_List_Image: View {
+    @ObservedObject var loader: ImageLoader
+    
+    init(urlString: String){
+        self.loader = ImageLoader(urlString: urlString)
+    }
+    
+    var body: some View{
+        Image(uiImage: loader.image ?? UIImage(systemName: "return")!)
+            .resizable()
+            .cornerRadius(8)
+            .aspectRatio(1, contentMode: .fit)
     }
 }
 
@@ -123,7 +134,6 @@ struct HomeView_ToolBarItem_NavigationBarLeading: View {
     @State private var isArrowUp = true
     @State private var rotateAngle:Double = 0
     var storedLocation = ["공릉 1동","오륜동","잠실 2동"]
-    
     
     var body: some View{
         

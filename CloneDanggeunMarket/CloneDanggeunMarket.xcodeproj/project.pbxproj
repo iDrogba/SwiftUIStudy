@@ -52,6 +52,7 @@
 		3F67A99827D8B7250038D218 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		3F67A99A27D8B7360038D218 /* LocalLifeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalLifeViewModel.swift; sourceTree = "<group>"; };
 		3F67A99C27D8B7950038D218 /* NetWorkCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkCenter.swift; sourceTree = "<group>"; };
+		3F67A99E27D9041F0038D218 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		3FD1C14E27D34C5200F69DE7 /* CloneDanggeunMarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloneDanggeunMarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FD1C15127D34C5200F69DE7 /* CloneDanggeunMarketApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloneDanggeunMarketApp.swift; sourceTree = "<group>"; };
 		3FD1C15327D34C5200F69DE7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -143,15 +144,16 @@
 		3FD1C15027D34C5200F69DE7 /* CloneDanggeunMarket */ = {
 			isa = PBXGroup;
 			children = (
+				3F67A99E27D9041F0038D218 /* Info.plist */,
 				3F67A99727D8B7120038D218 /* Model */,
 				3F1F471427D4BA1300C85173 /* View */,
 				3FD1C15127D34C5200F69DE7 /* CloneDanggeunMarketApp.swift */,
 				3FD1C15327D34C5200F69DE7 /* ContentView.swift */,
+				3F67A99C27D8B7950038D218 /* NetWorkCenter.swift */,
 				3FD1C15527D34C5300F69DE7 /* Assets.xcassets */,
 				3FD1C17D27D38AA600F69DE7 /* 994669.jpg */,
 				3FD1C17B27D38A9700F69DE7 /* 999846.jpg */,
 				3FD1C15727D34C5300F69DE7 /* Preview Content */,
-				3F67A99C27D8B7950038D218 /* NetWorkCenter.swift */,
 			);
 			path = CloneDanggeunMarket;
 			sourceTree = "<group>";
@@ -615,6 +617,7 @@
 				DEVELOPMENT_TEAM = ZNH7978JJQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CloneDanggeunMarket/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -645,6 +648,7 @@
 				DEVELOPMENT_TEAM = ZNH7978JJQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CloneDanggeunMarket/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

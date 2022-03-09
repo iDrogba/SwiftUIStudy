@@ -7,10 +7,11 @@
 
 import Foundation
 import Alamofire
+import SwiftUI
 
 struct NetWorkCenter {
             
-    func getHomeView_Post_Model(completion: @escaping ([HomeView_Post_Model]) -> Void){
+    func getHomeView_Post_Model(completion: @escaping ([HomeView_Post_Model]) -> Void) {
         guard let url = URL(string: "https://62260bc92dfa524018fa721d.mockapi.io/post_danggeun") else { return }
         
         AF.request(url).responseJSON { response in
@@ -39,5 +40,37 @@ struct NetWorkCenter {
             guard let url = URL(string: "https://62260bc92dfa524018fa721d.mockapi.io/post_localview") else { return }
             print("구현 중")
     }
+}
 
+class ImageLoader: ObservableObject {
+    @Published var image: UIImage?
+    var urlString: String
+    
+    init(urlString:String){
+        self.urlString = urlString
+        self.loadImageFromURL()
+    }
+    
+    func loadImageFromURL(){
+        guard let url = URL(string: urlString) else{ return }
+        
+        AF.request(url,method: .get).responseJSON { response in
+
+            switch response.result {
+
+            case .success(_):
+                guard let getData = response.data else{ return }
+                guard let loadImage = UIImage(data: getData) else{ return }
+                
+                DispatchQueue.main.async {
+                    self.image = loadImage
+                }
+ 
+            case .failure(let error):
+                print("errorCode: \(error._code)")
+                print("errorDescription: \(error.errorDescription!)")
+            }
+        }.resume()
+        
+    }
 }
