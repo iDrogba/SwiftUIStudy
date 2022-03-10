@@ -12,7 +12,7 @@ struct HomeView_Post_Model: Codable, Identifiable {
     let id: String
     let createdAt: String
     let title: String
-    let imageUrl: String
+    let image: String
     let address: String
     let price: String
 }

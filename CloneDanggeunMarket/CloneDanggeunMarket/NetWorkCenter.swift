@@ -43,7 +43,7 @@ struct NetWorkCenter {
 }
 
 class ImageLoader: ObservableObject {
-    @Published var image: UIImage?
+    @Published var image: UIImage = UIImage()
     var urlString: String
     
     init(urlString:String){
@@ -51,26 +51,45 @@ class ImageLoader: ObservableObject {
         self.loadImageFromURL()
     }
     
-    func loadImageFromURL(){
+    func loadImageFromURL() {
+        
         guard let url = URL(string: urlString) else{ return }
         
-        AF.request(url,method: .get).responseJSON { response in
-
-            switch response.result {
-
-            case .success(_):
-                guard let getData = response.data else{ return }
-                guard let loadImage = UIImage(data: getData) else{ return }
-                
+        DispatchQueue.global().async {
+            do {
+                let data = try Data(contentsOf: url)
                 DispatchQueue.main.async {
-                    self.image = loadImage
+                    guard let image = UIImage(data: data) else { return }
+                    self.image =  image
                 }
- 
-            case .failure(let error):
+            } catch {
                 print("errorCode: \(error._code)")
-                print("errorDescription: \(error.errorDescription!)")
             }
-        }.resume()
+        }
         
     }
+    
+//    func loadImageFromURL(){
+//        guard let url = URL(string: urlString) else{ return }
+//
+//        AF.request(url,method: .get).responseJSON { response in
+//
+//            switch response.result {
+//
+//            case .success(_):
+//                guard let getData = response.data else{ return }
+//                guard let loadImage = UIImage(data: getData) else{ return }
+//
+//                DispatchQueue.main.async {
+//                    self.image = loadImage
+//                }
+//
+//            case .failure(let error):
+//                print("errorCode: \(error._code)")
+//                print("errorDescription: \(error.errorDescription!)")
+//            }
+//        }.resume()
+//
+//    }
+    
 }
