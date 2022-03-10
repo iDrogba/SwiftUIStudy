@@ -42,33 +42,39 @@ struct NetWorkCenter {
     }
 }
 
-class ImageLoader: ObservableObject {
-    @Published var image: UIImage = UIImage()
-    var urlString: String
-    
-    init(urlString:String){
-        self.urlString = urlString
-        self.loadImageFromURL()
-    }
-    
-    func loadImageFromURL() {
-        
-        guard let url = URL(string: urlString) else{ return }
-        
-        DispatchQueue.global().async {
-            do {
-                let data = try Data(contentsOf: url)
-                guard let image = UIImage(data: data) else { return }
-                DispatchQueue.main.async {
-                    self.image =  image
-                }
-            } catch {
-                print("errorCode: \(error._code)")
-            }
-        }
-        
-    }
-    
+//class ImageLoader: ObservableObject {
+//    @Published var image: UIImage = UIImage()
+//    var urlString: String
+//
+//    init(urlString:String){
+//        self.urlString = urlString
+//        self.loadImageFromURL()
+//    }
+//
+//    func loadImageKingFisher() {
+//        guard let url = URL(string: urlString) else{ return }
+//
+//
+//    }
+//
+//    func loadImageFromURL() {
+//
+//        guard let url = URL(string: urlString) else{ return }
+//
+//        DispatchQueue.global().async {
+//            do {
+//                let data = try Data(contentsOf: url)
+//                guard let image = UIImage(data: data) else { return }
+//                DispatchQueue.main.async {
+//                    self.image =  image
+//                }
+//            } catch {
+//                print("errorCode: \(error._code)")
+//            }
+//        }
+//
+//    }
+//
 //    func loadImageFromURL(){
 //        guard let url = URL(string: urlString) else{ return }
 //
@@ -91,5 +97,5 @@ class ImageLoader: ObservableObject {
 //        }.resume()
 //
 //    }
-    
-}
+//
+//}

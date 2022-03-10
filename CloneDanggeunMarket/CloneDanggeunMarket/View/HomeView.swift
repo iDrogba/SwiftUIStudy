@@ -5,7 +5,9 @@
 //  Created by 김상현 on 2022/03/06.
 //
 import SwiftUI
+import UIKit
 import Foundation
+import Kingfisher
 
 struct HomeView: View {
         
@@ -46,8 +48,11 @@ struct HomeView_Main_List: View {
                     ForEach(homeView_ViewModel.homeView_Post_Models){ index in
                         HStack(spacing: 10) {
                             
-                            HomeView_Main_List_Image(urlString: index.image)
-                             
+                            KFImage(URL(string: index.image))
+                                .resizable()
+                                .cornerRadius(8)
+                                .aspectRatio(1, contentMode: .fit)
+                            
                             VStack(alignment: .leading, spacing: 3) {
                                 Text("\(index.title)")
                                     .font(.callout)
@@ -94,23 +99,6 @@ struct HomeView_Main_List: View {
                 
             }
         }
-    }
-}
-
-struct HomeView_Main_List_Image: View {
-    @ObservedObject var loader: ImageLoader
-
-    init(urlString: String){
-        self.loader = ImageLoader(urlString: urlString)
-    }
-    
-    var body: some View{
-        
-        Image(uiImage: loader.image)
-            .resizable()
-            .cornerRadius(8)
-            .aspectRatio(1, contentMode: .fit)
-            
     }
 }
 
