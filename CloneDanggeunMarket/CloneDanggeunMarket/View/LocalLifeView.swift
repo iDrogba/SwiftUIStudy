@@ -8,103 +8,95 @@
 import SwiftUI
 
 struct LocalLifeView: View {
+    @Binding var UITableView_Appearance_ContentInset_Top : CGFloat
+    
     var body: some View{
         NavigationView{
-                LocalLifeView_Main()
-                    .toolbar {
-                        ToolbarItem(placement: .navigationBarLeading) {
-                            LocalLifeView_ToolBarItem_NavigationBarLeading()
-                            
-                        }
-                        
-                        ToolbarItem(placement: .navigationBarTrailing) {
-                            LocalLifeView_ToolBarItem_NavigationBarTrailing()
-                        }
-                    }.navigationBarTitleDisplayMode(.inline)
+            LocalLifeView_Main()
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        LocalLifeView_ToolBarItem_NavigationBarLeading()
+                    }
+
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        LocalLifeView_ToolBarItem_NavigationBarTrailing()
+                    }
+                }.navigationBarTitleDisplayMode(.inline)
+        }.onAppear(){
+            UITableView.appearance().contentInset.top = UITableView_Appearance_ContentInset_Top
+            UITableView.appearance().contentInset.top = -35
         }
     }
 }
-struct LocalLifeView_Main: View{
-    
-    init() {
-        UITableView.appearance().sectionFooterHeight = 5
-        UITableView.appearance().sectionHeaderHeight = 0
-    }
+
+struct LocalLifeView_Main: View {
     
     var body: some View{
         GeometryReader{ geometry in
-            VStack{
-                List{
-                    ForEach(0..<20){ _ in
-                        Section {
-                            
-                            VStack(alignment: .leading, spacing: 0){
-                                Rectangle()
-                                    .frame(width: UIScreen.main.bounds.size.width/10, height: 20)
-                                    .foregroundColor(Color(UIColor.systemGray6))
-                                    .cornerRadius(5)
-                                    .overlay{
-                                        Text("질문")
-                                            .font(.caption)
-                                            .fontWeight(.ultraLight)
-                                    }
-                                
-                                Text("하계동 주짓수 파라에스트라 체육관관비가 궁금한데 관비만 여쭤보기엔 전화 상담이나 디엠이 좀 죄송하더라구요...성인반 관비 혹시 알 수 있을까요")
-                                    .font(.callout)
-                                    .fontWeight(.light)
-                                    .padding(.vertical)
-                                
-                                HStack{
-                                    Text("himheys")
-                                        .font(.caption)
-                                        .fontWeight(.ultraLight)
-                                    Text("공릉 2동")
-                                        .font(.caption)
-                                        .fontWeight(.ultraLight)
-                                    
-                                    Spacer()
-                                    
-                                    Text("30분 전")
+            List{
+                
+                ForEach(0..<20){ index in
+                    Section {
+                        VStack(alignment: .leading, spacing: 0){
+                            Rectangle()
+                                .frame(width: UIScreen.main.bounds.size.width/10, height: 20)
+                                .foregroundColor(Color(UIColor.systemGray6))
+                                .cornerRadius(5)
+                                .overlay{
+                                    Text("질문")
                                         .font(.caption)
                                         .fontWeight(.ultraLight)
                                 }
+                            
+                            Text("하계동 주짓수 파라에스트라 체육관관비가 궁금한데 관비만 여쭤보기엔 전화 상담이나 디엠이 좀 죄송하더라구요...성인반 관비 혹시 알 수 있을까요")
+                                .font(.callout)
+                                .fontWeight(.light)
+                                .padding(.vertical)
+                            
+                            HStack{
+                                Text("himheys")
+                                    .font(.caption)
+                                    .fontWeight(.ultraLight)
+                                Text("공릉 2동")
+                                    .font(.caption)
+                                    .fontWeight(.ultraLight)
                                 
                                 Spacer()
-                                Divider()
-                                Spacer()
-                            
-                                HStack(spacing: 10){
-                                    HStack(spacing: 5){
-                                        Image(systemName: "face.smiling")
-                                            .font(.caption)
-                                        
-                                        Text("공감하기")
-                                            .font(.caption)
-                                            .fontWeight(.thin)
-                                    }
-                                    
-                                    HStack(spacing: 5){
-                                        Image(systemName: "message")
-                                            .font(.caption)
-                                        
-                                        Text("댓글 쓰기")
-                                            .font(.caption)
-                                            .fontWeight(.thin)
-                                    }
-                                }.foregroundColor(.gray)
+                                
+                                Text("30분 전")
+                                    .font(.caption)
+                                    .fontWeight(.ultraLight)
                             }
                             
-                        }.padding(.vertical, 10.0)
-                            .frame(width: geometry.size.width * 0.9)
-                    }
+                            Spacer()
+                            Divider()
+                            Spacer()
+                        
+                            HStack(spacing: 10){
+                                HStack(spacing: 5){
+                                    Image(systemName: "face.smiling")
+                                        .font(.caption)
+                                    
+                                    Text("공감하기")
+                                        .font(.caption)
+                                        .fontWeight(.thin)
+                                }
+                                
+                                HStack(spacing: 5){
+                                    Image(systemName: "message")
+                                        .font(.caption)
+                                    
+                                    Text("댓글 쓰기")
+                                        .font(.caption)
+                                        .fontWeight(.thin)
+                                }
+                            }.foregroundColor(.gray)
+                        }
+                    }.padding(.vertical, 10.0)
+                    .frame(width: geometry.size.width * 0.9)
                 }
-                .listStyle(GroupedListStyle())
-                .onAppear(){
-                    UITableView.appearance().separatorInset = UIEdgeInsets(top: 0, left: 18, bottom: 0, right: 18)
-                }
-                
             }
-            
+            .listStyle(.grouped)
         }
     }
 }

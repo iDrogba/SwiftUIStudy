@@ -15,7 +15,6 @@ struct NetWorkCenter {
         guard let url = URL(string: "https://62260bc92dfa524018fa721d.mockapi.io/post_danggeun") else { return }
         
         AF.request(url).responseJSON { response in
-            print("response : "+"\(response)")
 
             do {
                 let decoder = JSONDecoder()

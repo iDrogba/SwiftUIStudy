@@ -18,6 +18,7 @@ struct HomeView_Post_Model: Codable, Identifiable {
 }
 
 class HomeView_ViewModel: ObservableObject {
+    
     @Published var homeView_Post_Models = [HomeView_Post_Model]()
     
     func netWork_HomeView_Post_Model(){

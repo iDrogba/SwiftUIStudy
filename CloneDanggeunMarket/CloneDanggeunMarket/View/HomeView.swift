@@ -10,6 +10,7 @@ import Foundation
 import Kingfisher
 
 struct HomeView: View {
+    @Binding var UITableView_Appearance_ContentInset_Top : CGFloat
         
     var body: some View {
         NavigationView{
@@ -24,6 +25,9 @@ struct HomeView: View {
                             HomeView_ToolBarItem_NavigationBarTrailing()
                         }
                 }.navigationBarTitleDisplayMode(.inline)
+        }.onAppear(){
+            UITableView.appearance().contentInset.top = UITableView_Appearance_ContentInset_Top
+            UITableView.appearance().contentInset.top = 0
         }
     }
 }
