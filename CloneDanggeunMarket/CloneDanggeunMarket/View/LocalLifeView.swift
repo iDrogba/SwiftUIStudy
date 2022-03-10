@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct LocalLifeView: View {
-    @Binding var UITableView_Appearance_ContentInset_Top : CGFloat
     
     var body: some View{
         NavigationView{
@@ -21,10 +20,13 @@ struct LocalLifeView: View {
                     ToolbarItem(placement: .navigationBarTrailing) {
                         LocalLifeView_ToolBarItem_NavigationBarTrailing()
                     }
-                }.navigationBarTitleDisplayMode(.inline)
+                }
+                .navigationBarTitleDisplayMode(.inline)
         }.onAppear(){
-            UITableView.appearance().contentInset.top = UITableView_Appearance_ContentInset_Top
-            UITableView.appearance().contentInset.top = -35
+            UIToolbar.appearance().barTintColor = UIColor.white
+            UITableView.appearance().separatorInset = UIEdgeInsets(top: 0, left: 18, bottom: 0, right: 18)
+            UITableView.appearance().sectionHeaderHeight = 0
+            UITableView.appearance().sectionFooterHeight = 5
         }
     }
 }
@@ -95,7 +97,7 @@ struct LocalLifeView_Main: View {
                     }.padding(.vertical, 10.0)
                     .frame(width: geometry.size.width * 0.9)
                 }
-            }
+            }.offset(y: -35)
             .listStyle(.grouped)
         }
     }

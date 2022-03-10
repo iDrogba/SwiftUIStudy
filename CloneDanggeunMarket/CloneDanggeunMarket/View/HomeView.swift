@@ -10,8 +10,7 @@ import Foundation
 import Kingfisher
 
 struct HomeView: View {
-    @Binding var UITableView_Appearance_ContentInset_Top : CGFloat
-        
+   
     var body: some View {
         NavigationView{
                 HomeView_Main()
@@ -26,14 +25,14 @@ struct HomeView: View {
                         }
                 }.navigationBarTitleDisplayMode(.inline)
         }.onAppear(){
-            UITableView.appearance().contentInset.top = UITableView_Appearance_ContentInset_Top
-            UITableView.appearance().contentInset.top = 0
+            UITableView.appearance().separatorInset = UIEdgeInsets(top: 0, left: 18, bottom: 0, right: 18)
         }
     }
 }
 
 struct HomeView_Main: View {
     var body: some View {
+
         ZStack{
             HomeView_Main_List()
             HomeView_Main_OrangeButton()
@@ -98,7 +97,6 @@ struct HomeView_Main_List: View {
                 .listStyle(InsetListStyle())
                 .onAppear(){
                     homeView_ViewModel.netWork_HomeView_Post_Model()
-                    UITableView.appearance().separatorInset = UIEdgeInsets(top: 0, left: 18, bottom: 0, right: 18)
                 }
                 
             }
