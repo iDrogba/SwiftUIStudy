@@ -58,8 +58,8 @@ class ImageLoader: ObservableObject {
         DispatchQueue.global().async {
             do {
                 let data = try Data(contentsOf: url)
+                guard let image = UIImage(data: data) else { return }
                 DispatchQueue.main.async {
-                    guard let image = UIImage(data: data) else { return }
                     self.image =  image
                 }
             } catch {
